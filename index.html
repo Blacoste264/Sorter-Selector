@@ -2,50 +2,86 @@
 <html>
     <head>
         <title>
-            Sorting Algorithm Selstatector
+            Sorting Algorithms
         </title>
-        <link rel="stylesheet" href="/styles.css">
-        <script
-            src="http://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script 
+        src="https://code.jquery.com/jquery-3.2.1.js" 
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" 
+        crossorigin="anonymous">
+        </script>
         <link rel="stylesheet" 
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-            crossorigin="anonymous">
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
     </head>
     <body>
         <div class="row">
-            <div class="col-lg-6 col-sm-6 col-xs-4">
+            <div class="container">
+            <div class="col-lg-4 col-xs-12">
                 <form>
                     <div class="form-group">
-                        <label for="num1">Numbers</label>
-                        <input type="number" class="form-control" id="num1">
-                    </div>
-                    <div class="form-group">
-                        <label for="num2"></label>
-                        <input type="number" class="form-control" id="num2">
-                    </div>
-                    <div class="form-group">
-                        <label for="num3"></label>
-                        <input type="number" class="form-control" id="num3">
-                    </div>
-                    <div class="form-group">
-                        <label for="num4"></label>
-                        <input type="number" class="form-control" id="num4">
-                    </div>
-                    <div class="form-group">
-                        <label for="num5"></label>
-                        <input type="number" class="form-control" id="num5">
-                    </div>
-                    <div class="form-group">
-                        <label for="num6"></label>
-                        <input type="number" class="form-control" id="num6">
+                        <label for="numberInput">Enter 6 numbers to be sorted
+                            <input 
+                            type="number" 
+                            class="form-control" 
+                            id="numberInput" 
+                            >
+                            <input 
+                            type="number" 
+                            class="form-control" 
+                            id="numberInput" 
+                            >
+                            <input 
+                            type="number" 
+                            class="form-control" 
+                            id="numberInput" 
+                            >
+                            <input 
+                            type="number" 
+                            class="form-control" 
+                            id="numberInput" 
+                            >
+                            <input 
+                            type="number" 
+                            class="form-control" 
+                            id="numberInput" 
+                            >
+                            <input 
+                            type="number" 
+                            class="form-control" 
+                            id="numberInput" 
+                            >
+                        </label>
                     </div>
                 </form>
             </div>
+            <div class="col-lg-4 col-xs-12">
+                <div class="form-group">
+                    <label for="planetSelect">Sorting algorithm selection
+                        <select class="form-control" id="sortSelect">
+                            <option></option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <div class="form-group">
+                    <button type="button" id="sortBtn" class="btn btn-success">
+                    Sort
+                    </button>
+                </div>
+            </div>
         </div>
-    
-        <script src="/algorithms.js"></script>
+    </div>
+
+                    
+
+            
+
+
+       
+
+    <script src="algorithms.js"></script>
     </body>
 </html>
