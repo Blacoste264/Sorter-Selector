@@ -7,5 +7,5 @@
 <h4> A lovely gif will appear with an animation of that particular sorting method you chose, as well as an in-depth description if how it works. </h4>
 
 
-<a href="http://imgur.com/QZjFO9m"><img src="http://i.imgur.com/QZjFO9m.png" title="source: imgur.com" /></a>
+<a href="http://imgur.com/S1GJRGr"><img src="http://i.imgur.com/S1GJRGr.png" title="source: imgur.com" /></a>
 
