@@ -1,7 +1,48 @@
 // Global array of user inputs
 var arr = []
 
-document.getElementById('sortBtn').onclick = function handleClickEvent(ev) {
+document.getElementById('bubbleBtn').onclick = function handleClickEvent(ev) {
+    arr = [];
+    createArr(ev);
+    bubbleSort(arr);
+    document.getElementById('output').innerHTML = ('Here is your new array! ' + arr);
+}
+
+document.getElementById('insertionBtn').onclick = function handleClickEvent(ev) {
+    arr = [];
+    console.log(arr)
+    createArr(ev);
+    insertionSort(arr);
+    document.getElementById('output').innerHTML = ('Here is your new array! ' + arr);
+}
+
+// document.getElementById('selectionBtn').onclick = function handleClickEvent(ev) {
+//     createArr(ev);
+//     bubbleSort(arr);
+//     document.getElementById('output').innerHTML = ('Here is your new array! ' + arr);
+// }
+
+// document.getElementById('mergerBtn').onclick = function handleClickEvent(ev) {
+//     createArr(ev);
+//     bubbleSort(arr);
+//     document.getElementById('output').innerHTML = ('Here is your new array! ' + arr);
+// }
+
+// document.getElementById('quickBtn').onclick = function handleClickEvent(ev) {
+//     createArr(ev);
+//     bubbleSort(arr);
+//     document.getElementById('output').innerHTML = ('Here is your new array! ' + arr);
+// }
+
+// document.getElementById('heapBtn').onclick = function handleClickEvent(ev) {
+//     createArr(ev);
+//     bubbleSort(arr);
+//     document.getElementById('output').innerHTML = ('Here is your new array! ' + arr);
+// }
+
+
+
+function createArr() {
     // Retrieve user input values from DOM
     var i1Val = document.getElementById('i1').value;
     var i2Val = document.getElementById('i2').value;
@@ -13,50 +54,39 @@ document.getElementById('sortBtn').onclick = function handleClickEvent(ev) {
     arr.push(i1Val, i2Val, i3Val, i4Val, i5Val, i6Val);
 }
 
-var select = document.getElementById("sortSelect");
-
-for (var i = 0; i < planets.length; i++) {
-  var plan = planets[i][0];
-  var el = document.createElement("option");
-  el.innerText = planets[i][0];
-  el.value = planets[i][1];
-  el.textContent = plan;
-  select.appendChild(el);
+// First sorting algorithm Bubblesort
+function bubbleSort(arr) {
+    var len = arr.length;
+    console.log(len);
+    for (var i = len - 1; i >= 0; i--) {
+        for (var j = 1; j <= i; j++) {
+            if (arr[j - 1] > arr[j]) {
+                var temp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
 }
 
-    // First sorting algorithm Bubblesort
-    var bubbleSort = function (arr){
-        var len = arr.length;
-        console.log(len);
-        for (var i = len-1; i>=0; i--){
-            for(var j = 1; j<=i; j++){
-            if(arr[j-1]>arr[j]){
-                var temp = arr[j-1];
-                arr[j-1] = arr[j];
-                arr[j] = temp;
-                }
-            }
-        }
-        return arr;
-    }
-    
-    // Second is Insertion Sort
-    var insertionSort = function (arr){
-        var minIdx, temp, 
-            len = arr.length;
-        for(var i = 0; i < len; i++){
-            minIdx = i;
-            for(var  j = i+1; j<len; j++){
-            if(arr[j]<arr[minIdx]){
+// Second is Insertion Sort
+function insertionSort(arr) {
+    var minIdx, temp,
+        len = arr.length;
+    for (var i = 0; i < len; i++) {
+        minIdx = i;
+        for (var j = i + 1; j < len; j++) {
+            if (arr[j] < arr[minIdx]) {
                 minIdx = j;
             }
-            }
-            temp = arr[i];
-            arr[i] = arr[minIdx];
-            arr[minIdx] = temp;
         }
-        return arr;
+        temp = arr[i];
+        arr[i] = arr[minIdx];
+        arr[minIdx] = temp;
     }
+    return arr;
+}
 
 // var select = document.getElementById("planetSelect");
 
@@ -67,4 +97,3 @@ for (var i = 0; i < planets.length; i++) {
 //   el.textContent = algorithmIndex;
 //   select.appendChild(el);
 // }
-

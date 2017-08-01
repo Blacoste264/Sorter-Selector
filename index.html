@@ -1,63 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Sorting Algorithms
-        </title>
-        <link rel="stylesheet" href="styles.css">
-        <script 
-        src="https://code.jquery.com/jquery-3.2.1.js" 
-        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" 
+
+<head>
+    <title>
+        Sorting Algorithms
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-        </script>
-        <link rel="stylesheet" 
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-        crossorigin="anonymous">
-    </head>
-    <body>
+</head>
+
+<body>
+    <div class="container">
         <div class="row">
-            <div class="container">
-            <div class="col-lg-4 col-xs-12">
-                <form>
-                    <div class="form-group">
-                        <label for="numberInput">Enter 6 numbers to be sorted
-                            <input type="number" class="form-control" id="i1">
-                            <input type="number" class="form-control" id="i2">
-                            <input type="number" class="form-control" id="i3">
-                            <input type="number" class="form-control" id="i4">
-                            <input type="number" class="form-control" id="i5">
-                            <input type="number" class="form-control" id="i6">
-                        </label>
+            <form>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="i1">
                     </div>
-                </form>
-            </div>
-            <div class="col-lg-4 col-xs-12">
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="i2">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="i3">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="i4">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="i5">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="i6">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
                 <div class="form-group">
-                    <label for="planetSelect">Sorting algorithm selection
-                        <select class="form-control" id="sortSelect">
-                            <option></option>
-                        </select>
-                    </label>
+                    <button type="button" id="bubbleBtn" class="btn btn-success"> BubbleSort!</button>
                 </div>
             </div>
-            <div class="col-lg-4 col-xs-12">
+            <div class="col-lg-2 col-md-2">
                 <div class="form-group">
-                    <button type="button" id="sortBtn" class="btn btn-success">
-                    Sort
-                    </button>
+                    <button type="button" id="insertionBtn" class="btn btn-success"> InsertionSort!</button>
                 </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="form-group">
+                    <button type="button" id="selectionBtn" class="btn btn-success"> SelectionSort!</button>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="form-group">
+                    <button type="button" id="mergerBtn" class="btn btn-success"> MergerSort!</button>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="form-group">
+                    <button type="button" id="quickBtn" class="btn btn-success"> QuickSort!</button>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="form-group">
+                    <button type="button" id="heapBtn" class="btn btn-success"> HeapSort!</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p id="output"></p>
             </div>
         </div>
     </div>
 
-                    
 
-            
-
-
-       
 
     <script src="algorithms.js"></script>
-    </body>
+</body>
+
 </html>
