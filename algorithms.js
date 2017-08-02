@@ -150,9 +150,9 @@ document.getElementById('mergerBtn').onclick = function handleClickEvent(ev) {
     arr = [];
     createArr(ev);
     selectionSort(arr);
-    document.getElementById('newArr').innerHTML = ('<h2> Here is your Selection sorted array! ' + arr + '</h2>');
+    document.getElementById('newArr').innerHTML = ('<h2> Here is your Merge sorted array! ' + arr + '</h2>');
     document.getElementById('img').innerHTML="<img src='images/Merge-sort-example-300px.gif' />";
-    document.getElementById('output').innerHTML = ('<b>How Selection sort works... </b></br>' 
+    document.getElementById('output').innerHTML = ('<b>How Merge sort works... </b></br>' 
     + ' its a divide and conquer type algorithm. Just break down your array into small and small pieces and until you have one items in each pieces. then merge ' 
     + ' together by comparing them. If you still have hard time to figure out what i am talking about, look at merge sort gif taken from wikipedia ' 
     + ' Merge sort has two parts. Main part does divide or breaks down and second part is merging/combining parts. At the time of combining, parts are combined together. '
